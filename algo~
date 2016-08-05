@@ -1,0 +1,22 @@
+class Item:
+This class contains 2 fields Name and price of item and setter and getter methods 
+class Menu:
+This class contains ArrayList of Item 
+
+class Hotel:
+This class contains field shop_id and Object refernce of type Menu
+
+class CSVReader
+Parses the csv file
+Algorithm
+1) take input from user including name of csv file, item1, item2
+2) now create object of CSVReader which parses csv file and creates arrayList of hotels and adds menu to Items and Menu to Hotels
+3) Now check whether the input values of items exists in hotel list
+retrive that list
+4) calculate the price of combo (item1 and item2) for each hotel
+	which includes 3 cases
+	1) both item are in same hotel then just compare the prices
+	2) one item in one hotel other in other hotel return nil
+	3) one combo is present along with one item calculate minimum price
+5) find the minimum price for hotel and output the price and id of hotel
+
