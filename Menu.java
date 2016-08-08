@@ -14,12 +14,16 @@ class Menu
 	public Item getItem(String name){
 		for(Item i: a)
 		{
-			String iname=i.getName();
-			if(iname.equals(name))
+			ArrayList<String> iname=i.getNames();
+			for(String s: iname)
 			{
-				return i;
-				
+				if(s.equals(name))
+				{
+					return i;
+					
+				}
 			}
+			
 		}
 		return null;
 	}
@@ -27,11 +31,14 @@ class Menu
 	{
 		for(Item i: a)
 		{
-			String iname=i.getName();
-			if(iname.equals(name))
+			ArrayList<String> iname=i.getNames();
+			for(String s: iname)
 			{
-				return true;
-				
+				if(s.equals(name))
+				{
+					return true;
+					
+				}
 			}
 		}
 		return false;

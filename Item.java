@@ -1,10 +1,13 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 class Item
 {
-	String itemName;
+	ArrayList<String> item_names;
 	double price;
-	Item(String itemName)
+	Item(ArrayList<String> itemNames)
 	{
-		this.itemName=itemName;
+		this.item_names=itemNames;
 	}
 	public void setPrice(double price)
 	{
@@ -14,8 +17,8 @@ class Item
 	{
 		return this.price;
 	}
-	public String getName()
+	public ArrayList<String> getNames()
 	{
-		return this.itemName;
+		return this.item_names;
 	}
 }

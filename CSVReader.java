@@ -22,6 +22,7 @@ public class CSVReader{
         	a= new ArrayList<Item>();
         	h=new ArrayList<Hotel>();
         	ArrayList<Integer > arrayid= new ArrayList<Integer>();
+        	ArrayList<String> item_names= null;
         	Item i=null;
         	Hotel h1=null;
         	Menu m=null;
@@ -29,26 +30,31 @@ public class CSVReader{
         		while((line=br.readLine())!=null)
         		{
         			//String line =br.readLine();
+        			item_names = new ArrayList<String>();
         			String[] splitData = line.split("\\s*,\\s*");
         			
-        			String name= splitData[2];
         			int id= Integer.parseInt(splitData[0]);
         			double price= Double.parseDouble(splitData[1]);
         			
+        			for(int j=2;j<splitData.length;j++)
+        			{
+        				item_names.add(splitData[j]);
+        			}
+        		
         			
-        			i=new Item(name);
+        			i=new Item(item_names);
     				i.setPrice(price);
 
-    				System.out.println(i.price);
+    				//System.out.println(i.price);
  				
     				/*if(arrayid.isEmpty())
     				{
-    					m= new Menu();
+    					mnot_found=false;= new Menu();
     					h1=new Hotel();
         				h1.setShop_id(id);
         				arrayid.add(id);
         				m.addItemToMenu(i);	
-        				h.add(h1);
+        		Medical Policy		h.add(h1);
         				h1.setMenu(m);
     				}*/
     				
