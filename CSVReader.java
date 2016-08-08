@@ -61,9 +61,9 @@ public class CSVReader{
         
         			else
         			{
-        				h1.setMenu(m);
         				m=new Menu();
-    					h1=new Hotel();
+        				h1=new Hotel();
+        				h1.setMenu(m);
         				h1.setShop_id(id);
         				arrayid.add(id);
         				m.addItemToMenu(i);	

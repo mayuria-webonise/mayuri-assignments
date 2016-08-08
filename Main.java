@@ -13,7 +13,7 @@ class Main
 			System.out.println(h);
 			System.out.println("ex");
 			
-	    	double minbill=0;
+	    	double minbill=1000;
 	    	int hotel_id=0;
 	    	for(Hotel h1:h)
 	    	{
