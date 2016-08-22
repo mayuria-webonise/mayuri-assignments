@@ -1,0 +1,6 @@
+The problem occured after solving the git rebase in local repo is that the commit changes are not reflected in github repo.
+so for that we need to pull the repo and it will show merge conflict after solving that conflict we can push
+
+if we are sure that we dont want remote changes then we can force push the local ones or we can review the status using force-with-lease
+
+to avoid this situation we should not push branch untill the work is completed on that branch or we can push only after rebasing
